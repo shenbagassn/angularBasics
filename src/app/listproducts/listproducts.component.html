@@ -1,0 +1,8 @@
+<h2>List Products</h2>
+{{productLists}}
+<ul>
+    <li *ngFor="let pdtArrValue of productLists;index as i,first as f,last as l,even as e,odd as o" [hidden]="!f"> 
+        {{i+1}} . {{pdtArrValue}} {{i}}, {{f}},{{l}},{{e}},{{o}}
+    </li>
+   
+</ul>

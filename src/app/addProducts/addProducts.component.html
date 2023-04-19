@@ -1,0 +1,20 @@
+<h2>Add Products</h2>
+Product Name: <input type="text" #txtbox> <br> <br>
+Product Name2: <input type="text" (blur)="createProduct2($event)"> <br> <br>
+ProductName3: <input type="text" [value]="pdtName"> {{pdtName}}<br> <br>
+ProductName4: <input type="text" [(ngModel)]="pdtName2" (blur)="createProduct3()">{{pdtName2}}
+ <br> <br>
+ {{pdtName2.length}} <br> <br>
+ <p *ngIf="pdtName2.length===0 else thnkmsg">
+    Please enter product name
+</p>
+<ng-template #thnkmsg >
+<p>
+Thanks for entering the productname
+</p>
+</ng-template>
+PdtStatus: {{PdtStatus}}  <br> <br>
+{{isCreate}} <br> <br>
+
+<button (click)="createProduct(txtbox.value)" [disabled]="!isCreate" >Product status</button> <br> <br>
+
