@@ -1,8 +1,53 @@
-<h2>List Products</h2>
+<h2>List Products(Component-2)</h2>
 {{productLists}}
 <ul>
-    <li *ngFor="let pdtArrValue of productLists;index as i,first as f,last as l,even as e,odd as o" [hidden]="!f"> 
+    <li *ngFor="let pdtArrValue of productLists;index as i,first as f,last as l,even as e,odd as o"
+    [ngClass]="{'even':e,'odd':o}"
+    [ngStyle]="{'color':e?'white':'red'}"
+    > 
         {{i+1}} . {{pdtArrValue}} {{i}}, {{f}},{{l}},{{e}},{{o}}
+
     </li>
    
 </ul>
+<h2>ngSwitch Example</h2>
+{{viewmode}} <br> <br>
+<button class="btn btn-primary active">Personal Details</button> &nbsp;
+<button class="btn btn-danger" (click)="doSwitch('contact')">Contact Details</button>&nbsp;
+<button class="btn btn-"(click)="doSwitch('services')">Services</button>&nbsp;
+<button class="btn btn-danger" (click)="doSwitch('course content1')">Course Content</button> <br> <br>
+
+
+
+<div [ngSwitch]="viewmode">
+   
+    <div *ngSwitchCase="'personal'">
+        <h3>Personal Details</h3>
+        Name:Shenba <br>
+        University:UNC <br>
+        age:30 <br>
+    </div>
+    <div *ngSwitchCase="'contact'">
+        <h3>Contact Details</h3>
+        Email:shenba@gmail.Com <br>
+        ph:91485655646 <br>
+    </div>
+    <div *ngSwitchCase="'services'">
+        <h3>Services</h3>
+        Door delivery <br>
+        Store pick-up <br>
+    </div>
+    <div *ngSwitchCase="'course content'">
+        <h3>Course content </h3>
+        1.HTML <br>
+        2.CSS <br>
+        3.JS <br>
+        4.TS <br>
+        5.Angular <br>
+    </div>
+
+    <div *ngSwitchDefault>
+        No Info found
+    </div>
+
+</div>

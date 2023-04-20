@@ -1,0 +1,9 @@
+li{
+    list-style-type: none;
+}
+.even{
+background-color: royalblue;
+}
+.odd{
+    background-color: greenyellow;
+}

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListproductsComponent implements OnInit {
 productLists:string[]=["sony","HP","samsung","Dell"];
+viewmode:string='personal';
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  doSwitch(viewCase:string){
+    this.viewmode=viewCase;
+  }
 }
