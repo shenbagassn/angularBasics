@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AddproductsComponent } from './addProducts/addProducts.component';
 import { ListproductsComponent } from './listproducts/listproducts.component';
+import { DefaultpipesComponent } from './Pipes/defaultpipes/defaultpipes.component';
 
 
 
@@ -12,7 +13,8 @@ import { ListproductsComponent } from './listproducts/listproducts.component';
   declarations: [
     AppComponent,
     AddproductsComponent,
-    ListproductsComponent
+    ListproductsComponent,
+    DefaultpipesComponent
   ],
   imports: [
     BrowserModule,

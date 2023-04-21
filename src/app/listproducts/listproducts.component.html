@@ -51,3 +51,14 @@
     </div>
 
 </div>
+<h3>ngNonBindable</h3>
+  <p ngNonBindable>
+    {{2+3}}==5 
+</p>
+
+<h3>Key Event Filtering</h3>
+
+Keyup: <input type="text"(keyup)="doEventFiltering($event)"> <br> <br>
+enter keyup:  <input type="text"(keyup.enter)="doEventFiltering($event)"> <br> <br>
+escape keyup:  <input type="text"(keyup.Escape)="doEventFiltering($event)"> <br> <br>
+

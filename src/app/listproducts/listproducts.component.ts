@@ -15,4 +15,10 @@ viewmode:string='personal';
   doSwitch(viewCase:string){
     this.viewmode=viewCase;
   }
+  doEventFiltering(event:any){
+    console.log("event triggered");
+    console.log(event);
+    
+    
+  }
 }

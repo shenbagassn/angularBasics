@@ -1,0 +1,26 @@
+<h2>Default Pipes(Component-3)</h2>
+Lowercase: {{username | lowercase}} <br> <br>
+
+Uppercase: {{place | uppercase}} <br> <br>
+
+Title case:{{msg|titlecase}} <br> <br>
+
+slice:{{msg|slice:3:13|uppercase}}... <button>Read more</button> <br> <br>
+
+json:{{obj|json }} <br> <br>{{num}} <br> <br>
+
+number:{{num | number:'5.2-3'}} <br> <br>
+
+{{1.1|number:'2.2-3' }} <br> <br>
+
+percent:{{data| percent:'2.2-3'}} <br> <br>
+
+currency:{{price|currency}} <br> <br>
+{{num|currency}}
+
+currency:{{price|currency:"INR":"code"}} <br> <br>
+
+currency:{{price|currency:"INR"}} <br> <br>
+date: {{lastActive | date}}
+
+
