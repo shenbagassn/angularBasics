@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../products.service';
 
 @Component({
   selector: 'app-listproducts',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ListproductsComponent implements OnInit {
 productLists:string[]=["sony","HP","samsung","Dell"];
 viewmode:string='personal';
-  constructor() { }
+//pdtser2= new ProductService;//manually create object in normal way
+  constructor(public pdtser2:ProductService) //single ton object
+  { }
 
   ngOnInit(): void {
   }

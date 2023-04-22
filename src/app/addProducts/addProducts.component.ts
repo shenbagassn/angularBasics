@@ -1,5 +1,6 @@
 import { log } from "console"
 import { Component } from '@angular/core';
+import { ProductService } from "../products.service";
 
 @Component({
     selector: 'app-addproducts',
@@ -11,7 +12,9 @@ export class AddproductsComponent {
     isCreate: boolean = false;
    pdtName:string='ACER';
    pdtName2:string='';
-    constructor() {
+//pdtser1= new ProductService();
+
+    constructor(public pdtser1:ProductService) {
         console.log("Addproducts compoenent instance created");
         setTimeout(()=>{
             this.isCreate= true;
@@ -29,5 +32,8 @@ export class AddproductsComponent {
     }
     createProduct3(){
         this.PdtStatus= "Product created as" +this.pdtName2;
+    }
+    changeStatus(){
+        this.pdtser1.changeStatusService();
     }
 }

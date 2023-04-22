@@ -18,3 +18,7 @@ PdtStatus: {{PdtStatus}}  <br> <br>
 
 <button (click)="createProduct(txtbox.value)" [disabled]="!isCreate" >Product status</button> <br> <br>
 
+<h3>Service property accessed from this component</h3>
+{{pdtser1.accountStatus}} <br> <br>
+
+<button class="btn btn-success " (click)="changeStatus()">Change status</button>
