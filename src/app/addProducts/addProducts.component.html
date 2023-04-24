@@ -21,4 +21,9 @@ PdtStatus: {{PdtStatus}}  <br> <br>
 <h3>Service property accessed from this component</h3>
 {{pdtser1.accountStatus}} <br> <br>
 
-<button class="btn btn-success " (click)="changeStatus()">Change status</button>
+<button class="btn btn-success " (click)="changeStatus()">Change status</button> <br> <br>
+<h1>Add a Product from this(addProducts) component to another(listProducts) component</h1>
+AddProduct: <input type="text" [(ngModel)]="addpdt" > &nbsp;
+<button class="btn btn-primary" (click)="addProducts(addpdt)" >Add Product</button>{{addpdt}}
+<hr>
+<app-listproducts></app-listproducts>

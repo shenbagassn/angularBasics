@@ -21,6 +21,7 @@ currency:{{price|currency}} <br> <br>
 currency:{{price|currency:"INR":"code"}} <br> <br>
 
 currency:{{price|currency:"INR"}} <br> <br>
-date: {{lastActive | date}}
-
-
+date: {{lastActive | date}} <br> <br>
+<h2>Custom Pipes</h2>
+count: <input type="number" [(ngModel)]="limit"> {{limit}}<br> <br>
+summary custom Pipe: {{msg |summaryCustom:limit}}

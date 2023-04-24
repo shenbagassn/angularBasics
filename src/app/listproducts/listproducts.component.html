@@ -1,9 +1,9 @@
 <h2>List Products(Component-2)</h2>
 <h3>service property accessed from list products component</h3>
 {{pdtser2.accountStatus}} <br> <br>
-{{productLists}}
+Search: <input type="text" [(ngModel)]="srchtxt"> <br> <br> 
 <ul>
-    <li *ngFor="let pdtArrValue of productLists;index as i,first as f,last as l,even as e,odd as o"
+    <li *ngFor="let pdtArrValue of productLists| customfilter:srchtxt;index as i,first as f,last as l,even as e,odd as o"
     [ngClass]="{'even':e,'odd':o}"
     [ngStyle]="{'color':e?'white':'red'}"
     > 
@@ -12,6 +12,8 @@
     </li>
    
 </ul>
+<p> Now we are getting this ul li from service</p>
+
 <h2>ngSwitch Example</h2>
 {{viewmode}} <br> <br>
 <button class="btn btn-primary active">Personal Details</button> &nbsp;
@@ -63,4 +65,6 @@
 Keyup: <input type="text"(keyup)="doEventFiltering($event)"> <br> <br>
 enter keyup:  <input type="text"(keyup.enter)="doEventFiltering($event)"> <br> <br>
 escape keyup:  <input type="text"(keyup.Escape)="doEventFiltering($event)"> <br> <br>
+
+<hr>
 

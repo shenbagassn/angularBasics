@@ -12,6 +12,7 @@ export class AddproductsComponent {
     isCreate: boolean = false;
    pdtName:string='ACER';
    pdtName2:string='';
+   addpdt:string='';
 //pdtser1= new ProductService();
 
     constructor(public pdtser1:ProductService) {
@@ -35,5 +36,8 @@ export class AddproductsComponent {
     }
     changeStatus(){
         this.pdtser1.changeStatusService();
+    }
+    addProducts(newPdt:string){
+        this.pdtser1.serviceAddProduct(newPdt)
     }
 }
