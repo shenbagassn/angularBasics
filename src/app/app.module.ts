@@ -8,6 +8,9 @@ import { ListproductsComponent } from './listproducts/listproducts.component';
 import { DefaultpipesComponent } from './Pipes/defaultpipes/defaultpipes.component';
 import { SummaryCustomPipe } from './Pipes/summary-custom.pipe';
 import { CustomfilterPipe } from './Pipes/customfilter.pipe';
+import { CustomdirectiveComponent } from './myowndirectives/customdirective/customdirective.component';
+import { HighlightDirective } from './myowndirectives/highlight.directive';
+import { InputformatDirective } from './myowndirectives/inputformat.directive';
 
 
 
@@ -18,7 +21,10 @@ import { CustomfilterPipe } from './Pipes/customfilter.pipe';
     ListproductsComponent,
     DefaultpipesComponent,
     SummaryCustomPipe,
-    CustomfilterPipe
+    CustomfilterPipe,
+    CustomdirectiveComponent,
+    HighlightDirective,
+    InputformatDirective
   ],
   imports: [
     BrowserModule,
