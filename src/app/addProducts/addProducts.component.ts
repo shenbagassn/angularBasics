@@ -13,6 +13,10 @@ export class AddproductsComponent {
    pdtName:string='ACER';
    pdtName2:string='';
    addpdt:string='';
+   parentData1:string='Data1 from parent';
+   parentData2:string="Data2 from parent";
+   parentData3:string="Data3 from parent";
+
 //pdtser1= new ProductService();
 
     constructor(public pdtser1:ProductService) {

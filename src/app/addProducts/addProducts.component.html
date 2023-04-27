@@ -3,27 +3,33 @@ Product Name: <input type="text" #txtbox> <br> <br>
 Product Name2: <input type="text" (blur)="createProduct2($event)"> <br> <br>
 ProductName3: <input type="text" [value]="pdtName"> {{pdtName}}<br> <br>
 ProductName4: <input type="text" [(ngModel)]="pdtName2" (blur)="createProduct3()">{{pdtName2}}
- <br> <br>
- {{pdtName2.length}} <br> <br>
- <p *ngIf="pdtName2.length===0 else thnkmsg">
+<br> <br>
+{{pdtName2.length}} <br> <br>
+<p *ngIf="pdtName2.length===0 else thnkmsg">
     Please enter product name
 </p>
-<ng-template #thnkmsg >
-<p>
-Thanks for entering the productname
-</p>
+<ng-template #thnkmsg>
+    <p>
+        Thanks for entering the productname
+    </p>
 </ng-template>
-PdtStatus: {{PdtStatus}}  <br> <br>
+PdtStatus: {{PdtStatus}} <br> <br>
 {{isCreate}} <br> <br>
 
-<button (click)="createProduct(txtbox.value)" [disabled]="!isCreate" >Product status</button> <br> <br>
+<button (click)="createProduct(txtbox.value)" [disabled]="!isCreate">Product status</button> <br> <br>
 
 <h3>Service property accessed from this component</h3>
 {{pdtser1.accountStatus}} <br> <br>
 
 <button class="btn btn-success " (click)="changeStatus()">Change status</button> <br> <br>
 <h1>Add a Product from this(addProducts) component to another(listProducts) component</h1>
-AddProduct: <input type="text" [(ngModel)]="addpdt" > &nbsp;
-<button class="btn btn-primary" (click)="addProducts(addpdt)" >Add Product</button>{{addpdt}}
+AddProduct: <input type="text" [(ngModel)]="addpdt"> &nbsp;
+<button class="btn btn-primary" (click)="addProducts(addpdt)">Add Product</button>{{addpdt}} <br> <br>
+{{parentData1}} <br> <br>
+{{parentData2}} <br> <br>
+{{parentData3}} <br> <br>
+
+<button (click)="parentData3='A new data from parent'">create</button>
+
 <hr>
-<app-listproducts></app-listproducts>
+<app-listproducts [mypadata1]="parentData1" [mypadata2]="parentData2" [mypadata3]="parentData3"></app-listproducts>
