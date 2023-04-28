@@ -11,6 +11,8 @@ import { CustomfilterPipe } from './Pipes/customfilter.pipe';
 import { CustomdirectiveComponent } from './myowndirectives/customdirective/customdirective.component';
 import { HighlightDirective } from './myowndirectives/highlight.directive';
 import { InputformatDirective } from './myowndirectives/inputformat.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { TdformComponent } from './Forms/tdform/tdform.component';
 
 
 
@@ -24,7 +26,9 @@ import { InputformatDirective } from './myowndirectives/inputformat.directive';
     CustomfilterPipe,
     CustomdirectiveComponent,
     HighlightDirective,
-    InputformatDirective
+    InputformatDirective,
+    LifecycleComponent,
+    TdformComponent
   ],
   imports: [
     BrowserModule,

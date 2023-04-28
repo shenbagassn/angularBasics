@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-defaultpipes',
   templateUrl: './defaultpipes.component.html',
-  styleUrls: ['./defaultpipes.component.css']
+  styleUrls: ['./defaultpipes.component.css'],
+  encapsulation:ViewEncapsulation.ShadowDom// encapsulation:ViewEncapsulation.None
 })
 export class DefaultpipesComponent implements OnInit {
   username: string = "SHENBA";
