@@ -1,0 +1,48 @@
+<div>
+    <h1>Registration Form</h1>
+    <h3> Please fill this form to register an account</h3>
+
+    <form (submit)="doSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="fname">FirstName</label>
+            <input type="text" class="form-control" #firstname="ngModel" name="fname" ngModel id="" required
+                minlength="4"> <br> <br>
+            {{firstname.touched}}
+            {{firstname.errors|json}}
+            <p class="alert alert-danger" *ngIf="(firstname.touched||firstname.dirty )&& firstname.errors?.['required']">
+                Please Enter FirstName
+            </p>
+            <p class="alert alert-danger" *ngIf="firstname.touched&& firstname.errors?.['minlength']">
+                Please enter more than 4 characters
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label for="lname">LastName</label>
+            <input type="text" class="form-control" name="lname" ngModel id=""> <br> <br>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" ngModel id=""> <br> <br>
+        </div>
+
+        <div>
+            <label for="pswd">Password</label>
+            <input type="text" class="form-control" pattern="^[0-9]*$" name="password" ngModel #pswd="ngModel" > {{pswd.errors|json}}<br> <br>
+            <p class="alert alert-danger"  *ngIf="pswd.errors?.['pattern']"  >
+                Please enter numbers only
+            </p>
+        </div>
+
+        <div>
+            form validation {{f.valid}}
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button> &nbsp;
+            <button type="button" class="btn btn-danger" (click)="f.reset()">Reset</button>
+        </div>
+        {{f.submitted}}
+        <p *ngif="f.submitted">
+            Form Submitted
+        </p>
+    </form>
+</div>
